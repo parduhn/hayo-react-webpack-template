@@ -2,19 +2,28 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path_to_react = path.resolve(__dirname, '../node_modules/react/dist/react.min.js');
 
 module.exports = {
-    entry: ['webpack/hot/dev-server', path.resolve(__dirname, '../src/app.jsx')],
+    entry: {app: [ 'webpack/hot/dev-server', path.resolve(__dirname, '../src/app.jsx')]},
     output: {
         path: path.resolve(__dirname, '../build'),
         filename: 'bundle.js'
     },
-    plugins:[
+    plugins: [
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
             }
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Testing',
+            filename: '../build/index.html',
+            template: 'src/index.html',
+            hash: true,
+            inject: 'body',
+            favicon: ''
         })
     ],
     module: {
