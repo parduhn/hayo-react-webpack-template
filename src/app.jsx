@@ -18,9 +18,8 @@ class App extends React.Component {
 
     render() {
         return (
-
             <div>
-                test4 2
+                test4 2 default
             </div>
         );
     }
