@@ -19,7 +19,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                test4 2 default
+                test4 2 3 4 5
             </div>
         );
     }
