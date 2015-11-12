@@ -1,7 +1,7 @@
 {
   "name": "react_webpack",
   "version": "0.0.1",
-  "description": "",
+  "description": "test",
   "main": "index.html",
   "scripts": {
     "build": "webpack --config webpack/webpack.build.js --bail",
@@ -23,6 +23,7 @@
     "webpack-dev-server": "^1.11.0"
   },
   "dependencies": {
-    "react": "^0.14.0"
+    "react": "^0.14.0",
+    "react-dom": "^0.14.2"
   }
 }

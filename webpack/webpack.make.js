@@ -114,6 +114,7 @@ module.exports = function makeWebpackConfig(options) {
 
     config.devServer = {
         contentBase: buildDir,
+
         stats: {
             modules: true,
             cached: true,
